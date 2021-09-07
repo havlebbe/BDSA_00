@@ -12,7 +12,7 @@ namespace leap_year_calculator
             else Console.WriteLine("nay");
         }
 
-        public static bool IsLeapYear(int year) {
+        public bool IsLeapYear(int year) {
             bool isLeap = false;
             if (year % 4 == 0) isLeap = true;
             if (year % 100 == 0) isLeap = false;
