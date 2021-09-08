@@ -47,7 +47,7 @@ namespace leap_year_calculator.Tests
 
             LeapYearCalculator.Main(new string[0]);
 
-            Assert.Equal("nay", writer.GetStringBuilder().ToString().Substring(44).Trim());
+            Assert.Contains("nay", writer.GetStringBuilder().ToString());
         }
 
         [Fact]
@@ -60,8 +60,7 @@ namespace leap_year_calculator.Tests
             Console.SetIn(input);
 
             LeapYearCalculator.Main(new string[0]);
-
-            Assert.Equal("yay", writer.GetStringBuilder().ToString().Substring(44).Trim());
+            Assert.Contains("yay", writer.GetStringBuilder().ToString());
         }
     }
 }
