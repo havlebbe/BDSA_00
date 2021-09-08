@@ -4,12 +4,15 @@ namespace leap_year_calculator
 {
     public class LeapYearCalculator
     {
-        static void Main(string[] args) 
+        public static void Main(string[] args) 
         {
-
+            Console.WriteLine("Please type a year to check if it is leap:");
+            int year = Convert.ToInt32(Console.ReadLine());
+            if (IsLeapYear(year)) Console.WriteLine("yay");
+            else Console.WriteLine("nay");
         }
 
-        public bool IsLeapYear(int year) {
+        public static bool IsLeapYear(int year) {
             bool isLeap = false;
             if (year % 4 == 0) isLeap = true;
             if (year % 100 == 0) isLeap = false;
